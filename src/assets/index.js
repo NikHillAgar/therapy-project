@@ -65,6 +65,7 @@ import profile_Section_PricingTape from "./profile/profile_Section_PricingTape.p
 import profile_Section_SessionTape from "./profile/profile_Section_SessionTape.png";
 import profile_Section_Tape from "./profile/profile_Section_Tape.png";
 import profile_Section_AddInfoTape from "./profile/profile_Section_AddInfoTape.png";
+import req_info from "./profile/req_info.png";
 
 // Blog imports
 import blog_CLOUD1 from "./blog/blog_CLOUD1.png";
@@ -150,4 +151,5 @@ export {
   profile_Section_SessionTape,
   profile_Section_Tape,
   profile_Section_AddInfoTape,
+  req_info,
 };
