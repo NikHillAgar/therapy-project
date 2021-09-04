@@ -212,12 +212,6 @@
     margin: 0px;
 }
 
-.profile-schedule-link img {
-    height: 54px;
-    width: 169px;
-    cursor: pointer;
-}
-
 .profile-location {
     margin-top: 18px;
 }
@@ -309,6 +303,29 @@
     font-size: 28px;
     margin: 0px auto;
     max-width: 450px;
+}
+
+.profile-schedule h1 {
+    margin: 0px;
+    text-decoration: underline;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.profile-schedule p {
+    font-size: 28px;
+    margin: 0px;
+}
+
+.profile-schedule-calender {
+    margin-top: 10px;
+}
+
+.profile-schedule-calender img {
+    height: 54px;
+    width: 169px;
+    cursor: pointer;
 }
 
 #profile-typical-session-fees-main {
@@ -884,6 +901,21 @@
     .profile-medium p {
         font-size: 22px;
         max-width: 325px;
+    }
+    .profile-schedule h1 {
+        margin-top: 16px;
+        margin-bottom: 4px;
+        font-size: 28px;
+    }
+    .profile-schedule p {
+        font-size: 22px;
+    }
+    .profile-schedule-calender {
+        margin-top: 8px;
+    }
+    .profile-schedule-calender img {
+        height: 35px;
+        width: 35px;
     }
     #profile-typical-session-fees-main {
         width: 50vw;
