@@ -172,12 +172,6 @@ const Profile = () => {
         if (!rowData["Website"]) {
           document.getElementById("profile-website-logo").style.display = "none";
         }
-        if (!rowData["Contact - Phone Number"]) {
-          document.getElementById("user-phone-number").style.display = "none";
-        }
-        if (!rowData["Contact - Email ID"]) {
-          document.getElementById("user-email-address").style.display = "none";
-        }
         if (!rowData["Sunday"]) {
           document.getElementsByClassName("week_days")[1].style.display = "none";
         } else {
