@@ -311,29 +311,6 @@
     max-width: 450px;
 }
 
-.profile-schedule h1 {
-    margin: 0px;
-    text-decoration: underline;
-    font-weight: 500;
-    margin-top: 20px;
-    margin-bottom: 5px;
-}
-
-.profile-schedule p {
-    font-size: 28px;
-    margin: 0px;
-}
-
-.profile-schedule-calender {
-    margin-top: 10px;
-}
-
-.profile-schedule-calender img {
-    height: 54px;
-    width: 169px;
-    cursor: pointer;
-}
-
 #profile-typical-session-fees-main {
     text-align: center;
     background-color: #8bbeaa;
