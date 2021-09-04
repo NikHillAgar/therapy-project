@@ -405,6 +405,7 @@ const Profile = () => {
                 <img id="contact-tape" class="tapes" src={profile_Section_SessionTape} alt="" />
                 <div className="profile-contact">
                   <h1>CONTACT-</h1>
+                  <p>{"Fill the form below."}
                   <div className="profile-schedule-link">
                     <a class="form-redirect" href={user.scheduleForm}>
                       <img src={req_info} alt="" />
