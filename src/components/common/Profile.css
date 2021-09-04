@@ -885,21 +885,6 @@
         font-size: 22px;
         max-width: 325px;
     }
-    .profile-schedule h1 {
-        margin-top: 16px;
-        margin-bottom: 4px;
-        font-size: 28px;
-    }
-    .profile-schedule p {
-        font-size: 22px;
-    }
-    .profile-schedule-calender {
-        margin-top: 8px;
-    }
-    .profile-schedule-calender img {
-        height: 35px;
-        width: 35px;
-    }
     #profile-typical-session-fees-main {
         width: 50vw;
         margin: 40px auto;
