@@ -438,7 +438,6 @@ const Profile = () => {
                   <h1>MEDIUM-</h1>
                   <p>{user.medium}</p>
                 </div>
-                </div>
               </div>
               <div id="profile-typical-session-fees-main">
                 <img id="typical-session-tape" class="tapes" src={profile_Section_PricingTape} alt="" />
