@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./Profile.css";
-
 import { fetchSheetRow } from "../../api";
 // test
 import {
@@ -29,10 +28,8 @@ import {
   profile_Section_AddInfoTape,
   req_info,
 } from "../../assets";
-
 const Profile = () => {
   const { id } = useParams();
-
   const [user, setUser] = useState({
     name: "",
     instagram: "",
@@ -84,7 +81,6 @@ const Profile = () => {
       "profile-background-main"
     );
     fetchSheetRow(0, id).then((rowData) => {
-
       setUser({
         ...user,
         name: rowData["Full Name"],
@@ -118,19 +114,14 @@ const Profile = () => {
 
         var contactoffsety = contactElement.offsetTop + 40;
         document.getElementsByClassName("center-line-images-one-img")[0].style.top = contactoffsety + "px";
-
         var timeoffsety = timeElement.offsetTop + 40;
         document.getElementsByClassName("center-line-images-one-img")[2].style.top = timeoffsety + "px";
-
         var typicalsessionoffsety = typicalSessionElement.offsetTop + 20;
         document.getElementsByClassName("center-line-images-one-img")[4].style.top = typicalsessionoffsety + "px";
-
         var detailsoffsety = detailsElement.offsetTop + 40;
         document.getElementsByClassName("center-line-images-one-img")[1].style.top = detailsoffsety + "px";
-
         var sessionoffsety = sessionElement.offsetTop + 20;
         document.getElementsByClassName("center-line-images-one-img")[3].style.top = sessionoffsety + "px";
-
         var centerlineoffsetheight = Math.max(typicalSessionElement.offsetTop + typicalSessionElement.offsetHeight, sessionElement.offsetTop + sessionElement.offsetHeight) - 225;
         var ax=window.innerWidth;
         if(ax<500)
@@ -138,11 +129,8 @@ const Profile = () => {
           centerlineoffsetheight=centerlineoffsetheight+100;
         }
         document.getElementsByClassName("profile-body-one-middle")[0].style.height = centerlineoffsetheight + "px";
-
         var bottomoffsetheight = backgroundElement.offsetTop + backgroundElement.offsetHeight - 100;
         document.getElementById("mainContainer").style.height = bottomoffsetheight + "px";
-
-
         if (!rowData["Location"]) {
           locationElement.style.display = "none";
         }
@@ -158,7 +146,6 @@ const Profile = () => {
         if (!rowData["Areas of Expertise"]) {
           expertiseElement.style.display = "none";
         }
-
         if (!rowData["Instagram"]) {
           document.getElementById("profile-instagram-logo").style.display =
             "none";
@@ -171,6 +158,16 @@ const Profile = () => {
         }
         if (!rowData["Website"]) {
           document.getElementById("profile-website-logo").style.display = "none";
+        }
+        if (!rowData["Contact - Phone Number"]) {
+          document.getElementById("user-phone-number").style.display = "none";
+        }
+        if (!rowData["Contact - Email ID"]) {
+          document.getElementById("user-email-address").style.display = "none";
+        }
+        if(!rowData["Scheduling"] && !rowData["Scheduling - Calendar Icon"])
+        {
+          document.getElementsByClassName[0]("profile-schedule").style.display = "none";
         }
         if (!rowData["Sunday"]) {
           document.getElementsByClassName("week_days")[1].style.display = "none";
@@ -207,14 +204,12 @@ const Profile = () => {
         } else {
           document.getElementsByClassName("week_days")[12].style.display = "none";
         }
-
+        if (!rowData["Scheduling - Calendar Icon"]) {
+          document.getElementsByClassName("calender-icon-info")[0].style.display = "none";
+        }
       }, 100);
     });
-
-
   }, []);
-
-
   var wid=window.innerWidth;
   const tocontact = () => {
     const contactElement = document.getElementById("profile-contact-main");
@@ -225,7 +220,6 @@ const Profile = () => {
     }
     window.scrollTo(0, poscontact);
   };
-
   const totime = () => {
     const contactElement = document.getElementById("profile-time-main");
     var poscontact = contactElement.offsetTop - 110;
@@ -235,7 +229,6 @@ const Profile = () => {
     }
     window.scrollTo(0, poscontact);
   };
-
   const todetails = () => {
     const contactElement = document.getElementById("profile-details-main");
     var poscontact = contactElement.offsetTop - 110;
@@ -245,7 +238,6 @@ const Profile = () => {
     }
     window.scrollTo(0, poscontact);
   };
-
   const tosession = () => {
     const contactElement = document.getElementById("profile-session-main");
     var poscontact = contactElement.offsetTop - 110;
@@ -255,7 +247,6 @@ const Profile = () => {
     }
     window.scrollTo(0, poscontact);
   };
-
   const tofees = () => {
     const contactElement = document.getElementById("profile-typical-session-fees-main");
     var poscontact = contactElement.offsetTop - 110;
@@ -265,7 +256,6 @@ const Profile = () => {
     }
     window.scrollTo(0, poscontact);
   };
-
   const tobackground = () => {
     const contactElement = document.getElementById("profile-background-main");
     var poscontact = contactElement.offsetTop - 110;
@@ -279,13 +269,11 @@ const Profile = () => {
   const handleDropdown = () => {
     const element = document.getElementById("dropdownID");
     const buttonElement = document.getElementById("jump-to-ID");
-
     element.classList.remove("hideAnything");
     element.classList.add("flexAnything");
     buttonElement.classList.remove("flexAnything");
     buttonElement.classList.add("hideAnything");
   };
-
   const handleDropdown2 = () => {
     const element = document.getElementById("dropdownID");
     const buttonElement = document.getElementById("jump-to-ID");
@@ -294,11 +282,9 @@ const Profile = () => {
     buttonElement.classList.remove("hideAnything");
     buttonElement.classList.add("flexAnything");
   };
-
   const topFunction = () => {
     document.documentElement.scrollTop = 0;
   };
-
   return (
     <div id="mainContainer" className="profile-main-container">
       <div className="profile-header-container">
@@ -392,7 +378,6 @@ const Profile = () => {
                 <img id="contact-tape" class="tapes" src={profile_Section_SessionTape} alt="" />
                 <div className="profile-contact">
                   <h1>CONTACT-</h1>
-                  <p>{"Fill the form below."}</p>
                   <div className="profile-schedule-link">
                     <a class="form-redirect" href={user.scheduleForm}>
                       <img src={req_info} alt="" />
@@ -437,6 +422,15 @@ const Profile = () => {
                 <div className="profile-medium">
                   <h1>MEDIUM-</h1>
                   <p>{user.medium}</p>
+                </div>
+                <div className="profile-schedule">
+                  <h1>SCHEDULING-</h1>
+                  <p>{user.scheduling}</p>
+                  <div className="profile-schedule-calender">
+                    <a class="calender-icon-info" href={user.calender}>
+                      <img src={req_info} alt="" />
+                    </a>
+                  </div>
                 </div>
               </div>
               <div id="profile-typical-session-fees-main">
@@ -510,7 +504,6 @@ const Profile = () => {
               </div>
             </div>
           </div>
-
           <div className="profile-body-two">
             <div id="profile-background-main">
               <img id="background-tape" class="tapes" src={profile_Section_AddInfoTape} alt="" />
@@ -548,5 +541,4 @@ const Profile = () => {
     </div>
   );
 };
-
 export default Profile;
