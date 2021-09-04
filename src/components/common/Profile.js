@@ -27,7 +27,6 @@ import {
   profile_Section_SessionTape,
   profile_Section_Tape,
   profile_Section_AddInfoTape,
-  req_info,
 } from "../../assets";
 
 const Profile = () => {
@@ -59,7 +58,6 @@ const Profile = () => {
     targetDemographic: "",
     evaluationsAdministered: "",
     areaOfExpertise: "",
-    scheduleForm: "",
   });
 
   useEffect(() => {
@@ -112,7 +110,6 @@ const Profile = () => {
         targetDemographic: rowData["Target Demographic"],
         evaluationsAdministered: rowData["Evaluations Administered"],
         areaOfExpertise: rowData["Areas of Expertise"],
-        scheduleForm: rowData["Scheduling Link"]
       });
       setTimeout(() => {
 
@@ -405,11 +402,9 @@ const Profile = () => {
                 <img id="contact-tape" class="tapes" src={profile_Section_SessionTape} alt="" />
                 <div className="profile-contact">
                   <h1>CONTACT-</h1>
-                  <p>{user.scheduling}</p>
-                  <div className="profile-schedule-link">
-                    <a class="form-redirect" href={user.scheduleForm}>
-                      <img src={req_info} alt="" />
-                    </a>
+                  <div className="profile-contact-details">
+                    <p id="user-phone-number">Phone- {user.contact}</p>
+                    <p id="user-email-address">Email- {user.email}</p>
                   </div>
                 </div>
                 <div className="profile-location" id="profileLocation">
@@ -456,7 +451,7 @@ const Profile = () => {
                   <p>{user.scheduling}</p>
                   <div className="profile-schedule-calender">
                     <a class="calender-icon-info" href={user.calender}>
-                      <img src={req_info} alt="" />
+                      <img src={profile_Section_ScheduleIcon} alt="" />
                     </a>
                   </div>
                 </div>
