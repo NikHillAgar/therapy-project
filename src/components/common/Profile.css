@@ -212,6 +212,12 @@
     margin: 0px;
 }
 
+.profile-schedule-link img {
+    height: 54px;
+    width: 169px;
+    cursor: pointer;
+}
+
 .profile-location {
     margin-top: 18px;
 }
