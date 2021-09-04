@@ -405,7 +405,6 @@ const Profile = () => {
                 <img id="contact-tape" class="tapes" src={profile_Section_SessionTape} alt="" />
                 <div className="profile-contact">
                   <h1>CONTACT-</h1>
-                  <p>{user.scheduling}</p>
                   <div className="profile-schedule-link">
                     <a class="form-redirect" href={user.scheduleForm}>
                       <img src={req_info} alt="" />
@@ -451,14 +450,6 @@ const Profile = () => {
                   <h1>MEDIUM-</h1>
                   <p>{user.medium}</p>
                 </div>
-                <div className="profile-schedule">
-                  <h1>SCHEDULING-</h1>
-                  <p>{user.scheduling}</p>
-                  <div className="profile-schedule-calender">
-                    <a class="calender-icon-info" href={user.calender}>
-                      <img src={req_info} alt="" />
-                    </a>
-                  </div>
                 </div>
               </div>
               <div id="profile-typical-session-fees-main">
