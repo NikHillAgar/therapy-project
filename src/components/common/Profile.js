@@ -178,10 +178,6 @@ const Profile = () => {
         if (!rowData["Contact - Email ID"]) {
           document.getElementById("user-email-address").style.display = "none";
         }
-        if(!rowData["Scheduling"] && !rowData["Scheduling - Calendar Icon"])
-        {
-          document.getElementsByClassName[0]("profile-schedule").style.display = "none";
-        }
         if (!rowData["Sunday"]) {
           document.getElementsByClassName("week_days")[1].style.display = "none";
         } else {
