@@ -213,9 +213,6 @@ const Profile = () => {
         } else {
           document.getElementsByClassName("week_days")[12].style.display = "none";
         }
-        if (!rowData["Scheduling - Calendar Icon"]) {
-          document.getElementsByClassName("calender-icon-info")[0].style.display = "none";
-        }
 
       }, 100);
     });
