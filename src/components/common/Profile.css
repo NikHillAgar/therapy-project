@@ -213,6 +213,16 @@
     height: 30px;
 }
 
+.form-scheduling {
+    margin-top: 10px;
+}
+
+.form-scheduling img {
+    height: 32px;
+    width: 198px;
+    cursor: pointer;
+}
+
 #profile-time-main {
     text-align: center;
     flex-direction: column;
@@ -284,29 +294,6 @@
     font-size: 28px;
     margin: 0px auto;
     max-width: 450px;
-}
-
-.profile-schedule h1 {
-    margin: 0px;
-    text-decoration: underline;
-    font-weight: 500;
-    margin-top: 20px;
-    margin-bottom: 5px;
-}
-
-.profile-schedule p {
-    font-size: 28px;
-    margin: 0px;
-}
-
-.profile-schedule-calender {
-    margin-top: 10px;
-}
-
-.profile-schedule-calender img {
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
 }
 
 #profile-typical-session-fees-main {
@@ -830,6 +817,17 @@
     .profile-location img {
         height: 24px;
     }
+    
+    .form-scheduling {
+        margin-top: 8px;
+    }
+
+    .form-scheduling img {
+        height: 25px;
+        width: 155px;
+        cursor: pointer;
+    }
+
     #profile-time-main {
         margin: 40px auto;
         padding-bottom: 16px;
@@ -882,13 +880,7 @@
     .profile-schedule p {
         font-size: 22px;
     }
-    .profile-schedule-calender {
-        margin-top: 8px;
-    }
-    .profile-schedule-calender img {
-        height: 35px;
-        width: 35px;
-    }
+
     #profile-typical-session-fees-main {
         width: 50vw;
         margin: 40px auto;
