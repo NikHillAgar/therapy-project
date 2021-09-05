@@ -402,6 +402,12 @@ const Profile = () => {
                     {user.location}
                   </p>
                 </div>
+                  <p>{" "}</p>
+                  <div className="form-scheduling">
+                    <a class="calender-icon-info" href={user.calender}>
+                      <img src={profile_Section_ScheduleIcon} alt="" />
+                    </a>
+                  </div>
               </div>
               <div id="profile-time-main">
                 <img id="time-tape" class="tapes" src={profile_Section_Tape} alt="" />
