@@ -192,26 +192,6 @@
     z-index: 2;
 }
 
-/*.profile-contact {
-    margin-top: 10px;
-}
-
-.profile-contact h1 {
-    margin: 0px;
-    padding-top: 40px;
-    text-decoration: underline;
-    font-weight: 500;
-}
-
-.profile-contact-details {
-    margin-top: 4px;
-}
-
-.profile-contact p {
-    font-size: 28px;
-    margin: 0px;
-}*/
-
 .profile-location {
     margin-top: 18px;
 }
@@ -834,16 +814,6 @@
         margin-top: 0px;
         width: 55vw;
         margin-bottom: 40px;
-    }
-    .profile-contact h1 {
-        padding-top: 30px;
-        font-size: 30px;
-    }
-    .profile-contact-details {
-        margin-top: 3px;
-    }
-    .profile-contact p {
-        font-size: 22px;
     }
     .profile-location {
         margin-top: 14px;
