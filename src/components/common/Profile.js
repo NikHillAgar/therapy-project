@@ -26,6 +26,7 @@ import {
   profile_Section_SessionTape,
   profile_Section_Tape,
   profile_Section_AddInfoTape,
+  req_info,
 } from "../../assets";
 
 const Profile = () => {
