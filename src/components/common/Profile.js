@@ -169,12 +169,6 @@ const Profile = () => {
         if (!rowData["Website"]) {
           document.getElementById("profile-website-logo").style.display = "none";
         }
-        if (!rowData["Contact - Phone Number"]) {
-          document.getElementById("user-phone-number").style.display = "none";
-        }
-        if (!rowData["Contact - Email ID"]) {
-          document.getElementById("user-email-address").style.display = "none";
-        }
         if(!rowData["Scheduling"] && !rowData["Scheduling - Calendar Icon"])
         {
           document.getElementsByClassName[0]("profile-schedule").style.display = "none";
@@ -400,13 +394,6 @@ const Profile = () => {
             <div className="profile-body-one-left">
               <div id="profile-contact-main">
                 <img id="contact-tape" class="tapes" src={profile_Section_SessionTape} alt="" />
-                /*<div className="profile-contact">
-                  <h1>CONTACT-</h1>
-                  <div className="profile-contact-details">
-                    <p id="user-phone-number">Phone- {user.contact}</p>
-                    <p id="user-email-address">Email- {user.email}</p>
-                  </div>
-                </div>*/
                 <div className="profile-location" id="profileLocation">
                   <h1>LOCATION-</h1>
                   <p>
