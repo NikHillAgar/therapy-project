@@ -9,7 +9,6 @@ import {
   profile_LogoLinkedin,
   profile_LogoTwitter,
   profile_LogoWebsite,
-  profile_Section_ScheduleIcon,
   profile_Section_ContactLocation,
   profile_SquigglyPointer,
   profile_YellowNameBlob,
@@ -38,14 +37,10 @@ const Profile = () => {
     linkedin: "",
     website: "",
     twitter: "",
-    contact: "",
-    email: "",
     location: "",
     workingTime: "",
-    scheduling: "",
     notesOnAvailability: "",
     medium: "",
-    calender: "",
     typicalSessionCost: "",
     notesOnFinancialAssistance: "",
     qualifications: "",
@@ -58,6 +53,7 @@ const Profile = () => {
     targetDemographic: "",
     evaluationsAdministered: "",
     areaOfExpertise: "",
+    scheduleForm: "",
   });
 
   useEffect(() => {
@@ -90,14 +86,10 @@ const Profile = () => {
         linkedin: rowData["LinkedIn"],
         website: "https://" + rowData["Website"],
         twitter: "http://twitter.com/" + rowData["Twitter"].slice(1),
-        contact: rowData["Contact - Phone Number"],
-        email: rowData["Contact - Email ID"],
         location: rowData["Location"],
         workingTime: rowData["Hours of Availability"],
         notesOnAvailability: rowData["Notes on Availability"],
-        scheduling: rowData["Scheduling"],
         medium: rowData["Medium"],
-        calender: rowData["Scheduling - Calendar Icon"],
         typicalSessionCost: rowData["Typical Session Cost"],
         notesOnFinancialAssistance: rowData["Notes on Financial Assistance"],
         qualifications: rowData["Qualifications"],
@@ -110,6 +102,7 @@ const Profile = () => {
         targetDemographic: rowData["Target Demographic"],
         evaluationsAdministered: rowData["Evaluations Administered"],
         areaOfExpertise: rowData["Areas of Expertise"],
+        scheduleForm: rowData["Scheduling Link"]
       });
       setTimeout(() => {
 
@@ -169,10 +162,6 @@ const Profile = () => {
         if (!rowData["Website"]) {
           document.getElementById("profile-website-logo").style.display = "none";
         }
-        if(!rowData["Scheduling"] && !rowData["Scheduling - Calendar Icon"])
-        {
-          document.getElementsByClassName[0]("profile-schedule").style.display = "none";
-        }
         if (!rowData["Sunday"]) {
           document.getElementsByClassName("week_days")[1].style.display = "none";
         } else {
@@ -207,9 +196,6 @@ const Profile = () => {
           document.getElementsByClassName("week_days")[13].style.display = "none";
         } else {
           document.getElementsByClassName("week_days")[12].style.display = "none";
-        }
-        if (!rowData["Scheduling - Calendar Icon"]) {
-          document.getElementsByClassName("calender-icon-info")[0].style.display = "none";
         }
 
       }, 100);
@@ -404,8 +390,8 @@ const Profile = () => {
                 </div>
                   <p>{" "}</p>
                   <div className="form-scheduling">
-                    <a class="calender-icon-info" href={user.calender}>
-                      <img src={profile_Section_ScheduleIcon} alt="" />
+                    <a class="form-req-info" href={user.scheduleForm}>
+                      <img src={req_info} alt="" />
                     </a>
                   </div>
               </div>
@@ -438,15 +424,6 @@ const Profile = () => {
                 <div className="profile-medium">
                   <h1>MEDIUM-</h1>
                   <p>{user.medium}</p>
-                </div>
-                <div className="profile-schedule">
-                  <h1>SCHEDULING-</h1>
-                  <p>{user.scheduling}</p>
-                  <div className="profile-schedule-calender">
-                    <a class="calender-icon-info" href={user.calender}>
-                      <img src={profile_Section_ScheduleIcon} alt="" />
-                    </a>
-                  </div>
                 </div>
               </div>
               <div id="profile-typical-session-fees-main">
