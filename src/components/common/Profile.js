@@ -400,13 +400,13 @@ const Profile = () => {
             <div className="profile-body-one-left">
               <div id="profile-contact-main">
                 <img id="contact-tape" class="tapes" src={profile_Section_SessionTape} alt="" />
-                <div className="profile-contact">
+                /*<div className="profile-contact">
                   <h1>CONTACT-</h1>
                   <div className="profile-contact-details">
                     <p id="user-phone-number">Phone- {user.contact}</p>
                     <p id="user-email-address">Email- {user.email}</p>
                   </div>
-                </div>
+                </div>*/
                 <div className="profile-location" id="profileLocation">
                   <h1>LOCATION-</h1>
                   <p>
