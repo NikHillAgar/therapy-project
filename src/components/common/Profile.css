@@ -223,6 +223,10 @@
     cursor: pointer;
 }
 
+.form-scheduling img:hover {
+        background: url("./profile/profile_Section_Tape.png") no-repeat;
+    }
+
 #profile-time-main {
     text-align: center;
     flex-direction: column;
